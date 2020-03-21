@@ -13,42 +13,29 @@ body {font-family:'Exo 2', sans-serif;}
 <BODY>
 <H2>Quotometer Generator</H2>
 <BR>
-<TABLE cellpadding='5'><TR><TD>
-<img src='thermo.php?max=100&current=0'>
-</TD><TD valign='top'>
-All your base belong to us!
-<HR>
-<H3>Method 1</H3>
-Type in your fundraising goal and current amounts, and save the resulting graphic.<BR>
-<form action='thermo.php' method='get'>
-<TABLE><TR>
-<TD>
-Goal: <input type='text' name='max' value='100'>
-</TD><TD>
-Current: <input type='text' name='current' value='0'>
-</TD>
-<TD>Units:
-<select name="unit" style="font-family:arial">
-<option value='none'>none</option>
-<option value='36'>$</option>
-<option value='163'>&#163;</option>
-<option value='165'>&#165;</option>
-<option value='8355'>&#8355;</option>
-<option value='8364'>&#8364;</option>
-</select>
-</TD>
-<TD><input type=submit value='Save Graphic'></TD></TR>
+<TABLE cellpadding='5'>
+<TR>
+  <TD>
+    <img src='thermo.php?max=100&current=0'>
+  </TD>
+  <TD valign='top'>
+    Update current attainment and save the resulting graphic.<BR>
+    <form action='thermo.php' method='get'>
+    <TABLE>
+    <TR>
+      <TD>
+        Goal: <input type='text' name='max' value='100'>
+      </TD>
+      <TD>
+        Current: <input type='text' name='current' value='0'>
+      </TD>
+      <TD>
+        <input type=submit value='Save Graphic'>
+      </TD>
+    </TR>
+    </TABLE>
+  </TD>
+</TR>
 </TABLE>
-<span style='font-size:8pt;'><b>Tip</b>: For percentages, set <b>units</b> to none, and type in your goal and current numbers suffixed with the percent(<b>%</b>) sign. (e.g. <b>100%</b> and <b>25%</b>)</span>
-<HR>
-<H3>Method 2</H3>
-Copy the <A HREF="http://sourceforge.net/projects/phpfundthermo">PHP Source</A> to your server, and then all you need is a good installation of PHP with the GD Libraries, and you're golden.
-</TD></TR>
-
-</TABLE>
-Comments? <A HREF="mailto:sai1138 at yahoo dot com">email me [sai1138 @ yahoo . com]</A>
-<font size='1'>Graphics courtesy <A HREF='http://www.rosiehardman.com/rosie.htm'>RH</A></font><P>
-<br/>
-
 </BODY>
 </HTML>
