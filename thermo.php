@@ -38,8 +38,7 @@ function code2utf($num){
  return '';
 } 
 
-#$font = "/usr/local/fonts/ttf/arial.ttf";
-#$font = "c:/windows/fonts/georgia.ttf";
+$font = "Georgia.ttf";
 
 $unit = ($HTTP_GET_VARS['unit']) ? $HTTP_GET_VARS['unit'] : 36; // ascii 36 = $
 $t_unit = ($unit == 'none') ? '' : code2utf($unit);
