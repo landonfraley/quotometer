@@ -40,8 +40,7 @@ function code2utf($num){
 
 $font = "D:\home\site\wwwroot\Georgia.ttf";
 
-#$unit = ($_GET['unit']) ? $_GET['unit'] : 36; // ascii 36 = $
-$unit = 'none';
+$unit = ($_GET['unit']) ? $_GET['unit'] : 37; // ascii 37 = %
 $t_unit = ($unit == 'none') ? '' : code2utf($unit);
 $t_max = ($_GET['max']) ? $_GET['max'] : 0;
 $t_current = isset($_GET['current']) ? $_GET['current'] : 0;
