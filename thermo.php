@@ -40,10 +40,10 @@ function code2utf($num){
 
 $font = "Georgia.ttf";
 
-$unit = ($HTTP_GET_VARS['unit']) ? $HTTP_GET_VARS['unit'] : 36; // ascii 36 = $
+$unit = ($_GET['unit']) ? $_GET['unit'] : 36; // ascii 36 = $
 $t_unit = ($unit == 'none') ? '' : code2utf($unit);
-$t_max = ($HTTP_GET_VARS['max']) ? $HTTP_GET_VARS['max'] : 0;
-$t_current = isset($HTTP_GET_VARS['current']) ? $HTTP_GET_VARS['current'] : 0;
+$t_max = ($_GET['max']) ? $_GET['max'] : 0;
+$t_current = isset($_GET['current']) ? $_GET['current'] : 0;
 
 $finalimagewidth = max(strlen($t_max),strlen($t_current))*25;
 $finalimage = imagecreateTrueColor(60+$finalimagewidth,405);
