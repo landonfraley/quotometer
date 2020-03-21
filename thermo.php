@@ -94,18 +94,18 @@ if ($t_current == $t_max) {
 
 // If there's a truetype font available, use it
 if ($font && (file_exists($font))) {
-    imagettftext ($finalimage, $fsize, 0, 60, 355, $black, $font,$t_unit."0");                 // Write the Zero
-    imagettftext ($finalimage, $fsize, 0, 60, 10+(2*$fsize), $black, $font, $t_unit."$t_max");   // Write the max
+    imagettftext ($finalimage, $fsize, 0, 60, 355, $black, $font, "0".$t_unit);                 // Write the Zero
+    imagettftext ($finalimage, $fsize, 0, 60, 10+(2*$fsize), $black, $font, "$t_max".$t_unit);   // Write the max
     if ($t_current > $t_max) {
-        imagettftext ($finalimage, $fsize+1, 0, 60, $fsize, $black, $font, $t_unit."$t_current!!"); // Current > Max
+        imagettftext ($finalimage, $fsize+1, 0, 60, $fsize, $black, $font, "$t_current".$t_unit." !!"); // Current > Max
     } elseif($t_current != 0) {
         if ($t_current == $t_max) {
-            imagettftext ($finalimage, $fsize, 0, 60, 10+(2*$fsize), $red, $font, $t_unit."$t_max!");  // Current = Max
+            imagettftext ($finalimage, $fsize, 0, 60, 10+(2*$fsize), $red, $font, "$t_max".$t_unit." !");  // Current = Max
         } else {
             if (round($t_current/$t_max) == 1) {
                 $ypos += 2*$fsize;
             }
-            imagettftext ($finalimage, $fsize, 0, 60, ($t_current > 0) ? ($ypos+$fsize) : ($ypos+(4*$fsize)), ($t_current > 0) ? $black : $red, $font, $t_unit."$t_current");  // Current < Max
+            imagettftext ($finalimage, $fsize, 0, 60, ($t_current > 0) ? ($ypos+$fsize) : ($ypos+(4*$fsize)), ($t_current > 0) ? $black : $red, $font, "$t_current".$t_unit);  // Current < Max
         }
     }
 }
